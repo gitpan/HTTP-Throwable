@@ -33,7 +33,7 @@ HTTP::Throwable::InternalServerError - 500 Internal Server Error
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 

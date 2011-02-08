@@ -9,7 +9,7 @@ extends 'HTTP::Throwable';
 has '+status_code' => ( default => 304 );
 has '+reason'      => ( default => 'Not Modified' );
 
-has 'redirect_location' => (
+has 'location' => (
     is       => 'ro',
     isa      => 'Str',
     required => 1,
@@ -21,8 +21,10 @@ around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    push @$headers => ('Location' => $self->redirect_location);
-    push @$headers => @{ $self->additional_headers };
+    push @$headers => ('Location' => $self->location);
+    if ( my $additional_headers = $self->additional_headers ) {
+        push @$headers => @$additional_headers;
+    }
     $headers;
 };
 
@@ -50,7 +52,7 @@ HTTP::Throwable::NotModified - 304 Not Modified
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -98,7 +100,7 @@ given in the response.
 
 =head1 ATTRIBUTES
 
-=head2 redirect_location
+=head2 location
 
 This is a required string, which will be used in the Location header
 when creating a PSGI response.

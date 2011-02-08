@@ -7,14 +7,14 @@ extends 'HTTP::Throwable';
 has '+status_code' => ( default => 300 );
 has '+reason'      => ( default => 'Multiple Choices' );
 
-has 'preferred_location' => ( is => 'ro', isa => 'Str' );
+has 'location' => ( is => 'ro', isa => 'Str' );
 
 around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    if ( my $preferred_location = $self->preferred_location ) {
-        push @$headers => ('Location' => $preferred_location);
+    if ( my $location = $self->location ) {
+        push @$headers => ('Location' => $location);
     }
     $headers;
 };
@@ -33,7 +33,7 @@ HTTP::Throwable::MultipleChoices - 300 Multiple Choices
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -57,7 +57,7 @@ cacheable unless indicated otherwise.
 
 =head1 ATTRIBUTES
 
-=head2 preferred_location
+=head2 location
 
 This is an optional string, which, if supplied, will be used in the Location
 header when creating a PSGI response.

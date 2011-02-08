@@ -21,7 +21,7 @@ HTTP::Throwable::UnsupportedMediaType - 415 Unsupported Media Type
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 

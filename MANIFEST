@@ -39,6 +39,7 @@ lib/HTTP/Throwable/UnsupportedMediaType.pm
 lib/HTTP/Throwable/UseProxy.pm
 t/000-load.t
 t/001-basic.t
+t/002-to-app.t
 t/300-all.t
 t/300-basic.t
 t/301-basic.t

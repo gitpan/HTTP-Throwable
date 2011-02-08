@@ -7,7 +7,7 @@ extends 'HTTP::Throwable';
 has '+status_code' => ( default => 305 );
 has '+reason'      => ( default => 'Use Proxy' );
 
-has 'proxy_location' => (
+has 'location' => (
     is       => 'ro',
     isa      => 'Str',
     required => 1,
@@ -17,7 +17,7 @@ around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    push @$headers => ('Location' => $self->proxy_location);
+    push @$headers => ('Location' => $self->location);
     $headers;
 };
 
@@ -35,7 +35,7 @@ HTTP::Throwable::UseProxy - 305 Use Proxy
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -47,7 +47,7 @@ servers.
 
 =head1 ATTRIBUTES
 
-=head2 proxy_location
+=head2 location
 
 This is a required string, which will be used in the Location header
 when creating a PSGI response.

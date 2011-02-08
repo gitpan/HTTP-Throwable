@@ -7,21 +7,21 @@ extends 'HTTP::Throwable';
 has '+status_code' => ( default => 307 );
 has '+reason'      => ( default => 'Temporary Redirect' );
 
-has 'temp_location' => (
+has 'location' => (
     is       => 'ro',
     isa      => 'Str',
     required => 1,
 );
 
-has 'cache_headers' => ( is => 'ro', isa => 'ArrayRef' );
+has 'additional_headers' => ( is => 'ro', isa => 'ArrayRef' );
 
 around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    push @$headers => ('Location' => $self->temp_location);
-    if ( my $cache_headers = $self->cache_headers ) {
-        push @$headers => @$cache_headers;
+    push @$headers => ('Location' => $self->location);
+    if ( my $additional_headers = $self->additional_headers ) {
+        push @$headers => @$additional_headers;
     }
     $headers;
 };
@@ -40,7 +40,7 @@ HTTP::Throwable::TemporaryRedirect - 307 Temporary Redirect
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -60,12 +60,12 @@ request on the new URI.
 
 =head1 ATTRIBUTES
 
-=head2 temp_location
+=head2 location
 
 This is a required string, which will be used in the Location header
 when creating a PSGI response.
 
-=head2 cache_headers
+=head2 additional_headers
 
 This is an optional ArrayRef containing HTTP headers that will be
 included when creating the PSGI response.

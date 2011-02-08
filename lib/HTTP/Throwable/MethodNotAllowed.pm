@@ -20,9 +20,9 @@ subtype 'HTTP::Throwable::Type::MethodList'
 has '+status_code' => ( default => 405 );
 has '+reason'      => ( default => 'Method Not Allowed' );
 
-has 'valid_methods' => (
+has 'allow' => (
     is       => 'ro',
-    isa      => 'HTTP::Throwable::Type::MethodList',
+    isa      => 'HTTP::Throwable::Type::MethodList[ HTTP::Throwable::Type::Methods ]',
     required => 1
 );
 
@@ -30,7 +30,7 @@ around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    push @$headers => ('Allow' => join "," => @{ $self->valid_methods });
+    push @$headers => ('Allow' => join "," => @{ $self->allow });
     $headers;
 };
 
@@ -48,7 +48,7 @@ HTTP::Throwable::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -59,7 +59,7 @@ resource.
 
 =head1 ATTRIBUTES
 
-=head2 valid_methods
+=head2 allow
 
 This is an ArrayRef of HTTP methods, it is required and the HTTP
 methods will be type checked to ensure validity and uniqueness.

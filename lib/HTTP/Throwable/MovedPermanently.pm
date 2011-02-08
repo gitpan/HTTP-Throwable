@@ -7,7 +7,7 @@ extends 'HTTP::Throwable';
 has '+status_code' => ( default => 301 );
 has '+reason'      => ( default => 'Moved Permanently' );
 
-has 'new_location' => (
+has 'location' => (
     is       => 'ro',
     isa      => 'Str',
     required => 1,
@@ -17,7 +17,7 @@ around 'build_headers' => sub {
     my $next    = shift;
     my $self    = shift;
     my $headers = $self->$next( @_ );
-    push @$headers => ('Location' => $self->new_location);
+    push @$headers => ('Location' => $self->location);
     $headers;
 };
 
@@ -35,7 +35,7 @@ HTTP::Throwable::MovedPermanently - 301 Moved Permanently
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -53,7 +53,7 @@ the new URI(s).
 
 =head1 ATTRIBUTES
 
-=head2 new_location
+=head2 location
 
 This is a required string, which will be used in the Location header
 when creating a PSGI response.

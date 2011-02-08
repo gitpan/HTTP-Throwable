@@ -33,7 +33,7 @@ HTTP::Throwable::RequestEntityToLarge - 413 Request Entity To Large
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 

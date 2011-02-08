@@ -2,6 +2,11 @@ package HTTP::Throwable;
 use Moose;
 use MooseX::StrictConstructor;
 
+use overload
+    '&{}' => 'to_app',
+    '""'  => 'as_string',
+    fallback => 1;
+
 use Plack::Util ();
 
 with 'Throwable';
@@ -44,6 +49,11 @@ sub as_psgi {
     [ $self->status_code, $headers, [ $body ] ];
 }
 
+sub to_app {
+    my $self = shift;
+    sub { my $env; $self->as_psgi( $env ) }
+}
+
 __PACKAGE__->meta->make_immutable;
 
 no Moose; 1;
@@ -58,7 +68,7 @@ HTTP::Throwable - A set of strongly-typed, PSGI-friendly HTTP 1.1 exception clas
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -92,6 +102,15 @@ version 0.001
   HTTP::Throwable::InternalServerError->throw(
       message => 'Something has gone very wrong!'
   );
+
+  # and lastly, the exception objects themselves
+  # also are PSGI apps
+  builder {
+      mount '/old' => HTTP::Throwable::MovedPermanently->new(
+          location => '/new'
+      );
+      # ...
+  };
 
 =head1 DESCRIPTION
 
@@ -156,6 +175,21 @@ of the status code, the reason and the message.
 This returns a representation of the exception object as PSGI
 response. It will build the content-type and content-length
 headers and include the result of C<as_string> in the body.
+
+This will also optionally take an C<$env> parameter, though
+nothing actually uses this, it is mostly there to support
+future possiblities.
+
+=head2 to_app
+
+This is the standard Plack convention for L<Plack::Component>s.
+It will return a CODE ref which expects the C<$env> parameter
+and returns the results of C<as_psgi>.
+
+=head2 &{}
+
+We overload C<&{}> to call C<to_app>, again in keeping with the
+L<Plack::Component> convention.
 
 =head1 SUBCLASSES
 
