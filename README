@@ -1,0 +1,13 @@
+
+
+This archive contains the distribution HTTP-Throwable,
+version 0.001:
+
+  A set of strongly-typed, PSGI-friendly HTTP 1.1 exception classes
+
+This software is copyright (c) 2011 by Infinity Interactive, Inc..
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+
