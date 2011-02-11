@@ -54,6 +54,24 @@ sub to_app {
     sub { my $env; $self->as_psgi( $env ) }
 }
 
+sub is_redirect {
+    my $self   = shift;
+    my $status = $self->status_code;
+    return $status >= 300 && $status < 400;
+}
+
+sub is_client_error {
+    my $self   = shift;
+    my $status = $self->status_code;
+    return $status >= 400 && $status < 500;
+}
+
+sub is_server_error {
+    my $self   = shift;
+    my $status = $self->status_code;
+    return $status >= 500 && $status < 600;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 no Moose; 1;
@@ -68,7 +86,7 @@ HTTP::Throwable - A set of strongly-typed, PSGI-friendly HTTP 1.1 exception clas
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

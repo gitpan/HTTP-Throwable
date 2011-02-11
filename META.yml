@@ -21,4 +21,4 @@ requires:
   MooseX::StrictConstructor: 0.12
   Plack: 0.9967
   Throwable: 0.102080
-version: 0.002
+version: 0.003

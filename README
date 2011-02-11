@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution HTTP-Throwable,
-version 0.002:
+version 0.003:
 
   A set of strongly-typed, PSGI-friendly HTTP 1.1 exception classes
 

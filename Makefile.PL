@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'Plack' => '0.9967',
     'Throwable' => '0.102080'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t'
   }
