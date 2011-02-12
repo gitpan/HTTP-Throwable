@@ -86,7 +86,7 @@ HTTP::Throwable - A set of strongly-typed, PSGI-friendly HTTP 1.1 exception clas
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 

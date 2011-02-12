@@ -21,7 +21,7 @@ HTTP::Throwable::BadRequest - 400 Bad Request
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

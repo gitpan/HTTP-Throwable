@@ -40,7 +40,7 @@ HTTP::Throwable::Found - 302 Found
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

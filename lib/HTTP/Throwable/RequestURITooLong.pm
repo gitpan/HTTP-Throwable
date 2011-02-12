@@ -21,7 +21,7 @@ HTTP::Throwable::RequestURITooLong - 414 Request-URI Too Long
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

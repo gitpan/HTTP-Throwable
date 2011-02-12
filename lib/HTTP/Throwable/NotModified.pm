@@ -52,7 +52,7 @@ HTTP::Throwable::NotModified - 304 Not Modified
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

@@ -21,7 +21,7 @@ HTTP::Throwable::HTTPVersionNotSupported - 505 HTTP Version Not Supported
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 
