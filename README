@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution HTTP-Throwable,
-version 0.004:
+version 0.010:
 
-  A set of strongly-typed, PSGI-friendly HTTP 1.1 exception classes
+  a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libraries
 
 This software is copyright (c) 2011 by Infinity Interactive, Inc..
 

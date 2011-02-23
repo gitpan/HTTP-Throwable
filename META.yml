@@ -1,15 +1,22 @@
 ---
-abstract: 'A set of strongly-typed, PSGI-friendly HTTP 1.1 exception classes'
+abstract: 'a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libraries'
 author:
   - 'Stevan Little <stevan.little@iinteractive.com>'
+  - 'Ricardo Signes <rjbs@cpan.org>'
 build_requires:
   HTTP::Request::Common: 0
+  Plack::Builder: 0
+  Plack::Test: 0
+  Scalar::Util: 0
+  Test::Deep: 0
   Test::Fatal: 0.003
+  Test::Moose: 0
   Test::More: 0.88
+  t::lib::Test::HT: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110440'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,7 +25,16 @@ name: HTTP-Throwable
 requires:
   List::AllUtils: 0
   Moose: 1.0
+  Moose::Role: 0
+  Moose::Util::TypeConstraints: 0
+  MooseX::Role::WithOverloading: 0
   MooseX::StrictConstructor: 0.12
   Plack: 0.9967
+  Plack::Util: 0
+  StackTrace::Auto: 0
+  Sub::Exporter: 0
+  Sub::Exporter::Util: 0
   Throwable: 0.102080
-version: 0.004
+  overload: 0
+version: 0.010
+x_authority: cpan:STEVAN

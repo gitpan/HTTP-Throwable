@@ -1,5 +1,18 @@
 Revision history for Perl extension HTTP::Throwable
 
+0.010
+    - NOT BACKWARD COMPATIBLE
+    - significantly rewritten by rjbs, in terms of roles rather than subclasses
+        - re-read the documentation!
+    - HTTP::Throwable::Factory is now the piece intended most for end users
+    - should be significantly easier to both use and extend
+
+0.005 Sat. Feb. 12, 2011
+    - add proper support for RFC 2324 (thanks rjbs)
+    - allowing more than one Proxy-Authenticate header
+      (thanks to chansen for pointing this out, though he
+      could have mentioned it before I released 0.004 :P)
+
 0.004 Sat. Feb. 12, 2011
     - allowing more than one WWW-Authenticate header
       (thanks to chansen for pointing this out)

@@ -9,12 +9,18 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'A set of strongly-typed, PSGI-friendly HTTP 1.1 exception classes',
-  'AUTHOR' => 'Stevan Little <stevan.little@iinteractive.com>',
+  'ABSTRACT' => 'a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libraries',
+  'AUTHOR' => 'Stevan Little <stevan.little@iinteractive.com>, Ricardo Signes <rjbs@cpan.org>',
   'BUILD_REQUIRES' => {
     'HTTP::Request::Common' => '0',
+    'Plack::Builder' => '0',
+    'Plack::Test' => '0',
+    'Scalar::Util' => '0',
+    'Test::Deep' => '0',
     'Test::Fatal' => '0.003',
-    'Test::More' => '0.88'
+    'Test::Moose' => '0',
+    'Test::More' => '0.88',
+    't::lib::Test::HT' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -26,11 +32,19 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'List::AllUtils' => '0',
     'Moose' => '1.0',
+    'Moose::Role' => '0',
+    'Moose::Util::TypeConstraints' => '0',
+    'MooseX::Role::WithOverloading' => '0',
     'MooseX::StrictConstructor' => '0.12',
     'Plack' => '0.9967',
-    'Throwable' => '0.102080'
+    'Plack::Util' => '0',
+    'StackTrace::Auto' => '0',
+    'Sub::Exporter' => '0',
+    'Sub::Exporter::Util' => '0',
+    'Throwable' => '0.102080',
+    'overload' => '0'
   },
-  'VERSION' => '0.004',
+  'VERSION' => '0.010',
   'test' => {
     'TESTS' => 't/*.t'
   }
