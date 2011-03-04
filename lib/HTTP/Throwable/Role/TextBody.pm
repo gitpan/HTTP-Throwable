@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::TextBody;
 BEGIN {
   $HTTP::Throwable::Role::TextBody::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::TextBody::VERSION = '0.011';
+}
 use Moose::Role;
 
 sub body { $_[0]->text_body }
@@ -32,7 +35,7 @@ HTTP::Throwable::Role::TextBody - an exception with a plaintext body
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 OVERVIEW
 

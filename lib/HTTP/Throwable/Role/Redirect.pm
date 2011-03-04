@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Redirect;
 BEGIN {
   $HTTP::Throwable::Role::Redirect::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Redirect::VERSION = '0.011';
+}
 use Moose::Role;
 
 has 'location' => (
@@ -31,7 +34,7 @@ HTTP::Throwable::Role::Redirect - an exception that is a redirect
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 OVERVIEW
 

@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::NoBody;
 BEGIN {
   $HTTP::Throwable::Role::NoBody::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::NoBody::VERSION = '0.011';
+}
 use Moose::Role;
 
 sub body { return }
@@ -29,7 +32,7 @@ HTTP::Throwable::Role::NoBody - an exception with no body
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 OVERVIEW
 

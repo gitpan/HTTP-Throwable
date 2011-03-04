@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::BadRequest;
 BEGIN {
   $HTTP::Throwable::Role::Status::BadRequest::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::BadRequest::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -25,7 +28,7 @@ HTTP::Throwable::Role::Status::BadRequest - 400 Bad Request
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

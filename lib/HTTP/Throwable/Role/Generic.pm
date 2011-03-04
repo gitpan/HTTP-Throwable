@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Generic;
 BEGIN {
   $HTTP::Throwable::Role::Generic::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Generic::VERSION = '0.011';
+}
 use Moose::Role;
 
 with 'HTTP::Throwable';
@@ -26,7 +29,7 @@ HTTP::Throwable::Role::Generic - a generic built-by-hand exception
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

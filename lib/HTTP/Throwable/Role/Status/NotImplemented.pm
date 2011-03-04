@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::NotImplemented;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotImplemented::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::NotImplemented::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -24,7 +27,7 @@ HTTP::Throwable::Role::Status::NotImplemented - 501 Not Implemented
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

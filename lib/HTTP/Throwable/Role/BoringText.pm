@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::BoringText;
 BEGIN {
   $HTTP::Throwable::Role::BoringText::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::BoringText::VERSION = '0.011';
+}
 use Moose::Role;
 
 sub text_body { $_[0]->status_line }
@@ -19,7 +22,7 @@ HTTP::Throwable::Role::BoringText - provide the simplest text_body method possib
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 OVERVIEW
 

@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::ProxyAuthenticationRequired;
 BEGIN {
   $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -44,7 +47,7 @@ HTTP::Throwable::Role::Status::ProxyAuthenticationRequired - 407 Proxy Authentic
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

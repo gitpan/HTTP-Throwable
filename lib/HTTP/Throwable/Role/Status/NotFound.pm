@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::NotFound;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotFound::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::NotFound::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -24,7 +27,7 @@ HTTP::Throwable::Role::Status::NotFound - 404 Not Found
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

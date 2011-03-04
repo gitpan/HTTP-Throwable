@@ -2,6 +2,9 @@ package HTTP::Throwable;
 BEGIN {
   $HTTP::Throwable::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::VERSION = '0.011';
+}
 use Moose::Role;
 use MooseX::StrictConstructor;
 use MooseX::Role::WithOverloading;
@@ -102,7 +105,7 @@ HTTP::Throwable - a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libr
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 SYNOPSIS
 

@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable;
 BEGIN {
   $HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -36,7 +39,7 @@ HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable - 416 Requested Rang
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::NotModified;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotModified::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::NotModified::VERSION = '0.011';
+}
 use Moose::Role;
 
 use Plack::Util ();
@@ -41,7 +44,7 @@ HTTP::Throwable::Role::Status::NotModified - 304 Not Modified
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

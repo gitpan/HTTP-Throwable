@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::Found;
 BEGIN {
   $HTTP::Throwable::Role::Status::Found::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::Found::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -25,7 +28,7 @@ HTTP::Throwable::Role::Status::Found - 302 Found
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

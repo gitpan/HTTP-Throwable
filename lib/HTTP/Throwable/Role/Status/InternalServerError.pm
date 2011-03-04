@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::InternalServerError;
 BEGIN {
   $HTTP::Throwable::Role::Status::InternalServerError::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::InternalServerError::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -36,7 +39,7 @@ HTTP::Throwable::Role::Status::InternalServerError - 500 Internal Server Error
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

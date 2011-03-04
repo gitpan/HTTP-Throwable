@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::PreconditionFailed;
 BEGIN {
   $HTTP::Throwable::Role::Status::PreconditionFailed::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::PreconditionFailed::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -24,7 +27,7 @@ HTTP::Throwable::Role::Status::PreconditionFailed - 412 Precondition Failed
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::MultipleChoices;
 BEGIN {
   $HTTP::Throwable::Role::Status::MultipleChoices::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::MultipleChoices::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -36,7 +39,7 @@ HTTP::Throwable::Role::Status::MultipleChoices - 300 Multiple Choices
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

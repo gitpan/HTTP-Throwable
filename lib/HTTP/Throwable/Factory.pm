@@ -2,6 +2,9 @@ package HTTP::Throwable::Factory;
 BEGIN {
   $HTTP::Throwable::Factory::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Factory::VERSION = '0.011';
+}
 use Moose;
 
 use Sub::Exporter::Util ();
@@ -95,7 +98,7 @@ HTTP::Throwable::Factory - a factory that throws HTTP::Throwables for you
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 OVERVIEW
 

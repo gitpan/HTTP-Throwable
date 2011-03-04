@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::Forbidden;
 BEGIN {
   $HTTP::Throwable::Role::Status::Forbidden::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::Forbidden::VERSION = '0.011';
+}
 use Moose::Role;
 
 with(
@@ -24,7 +27,7 @@ HTTP::Throwable::Role::Status::Forbidden - 403 Forbidden
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 

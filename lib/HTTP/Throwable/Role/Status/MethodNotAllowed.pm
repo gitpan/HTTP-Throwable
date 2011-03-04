@@ -2,6 +2,9 @@ package HTTP::Throwable::Role::Status::MethodNotAllowed;
 BEGIN {
   $HTTP::Throwable::Role::Status::MethodNotAllowed::AUTHORITY = 'cpan:STEVAN';
 }
+BEGIN {
+  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.011';
+}
 use Moose::Role;
 use Moose::Util::TypeConstraints;
 
@@ -53,7 +56,7 @@ HTTP::Throwable::Role::Status::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 DESCRIPTION
 
