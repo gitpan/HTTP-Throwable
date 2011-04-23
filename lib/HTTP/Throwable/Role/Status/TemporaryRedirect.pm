@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::TemporaryRedirect::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::TemporaryRedirect::VERSION = '0.011';
+  $HTTP::Throwable::Role::Status::TemporaryRedirect::VERSION = '0.012';
 }
 use Moose::Role;
 
@@ -28,7 +28,7 @@ HTTP::Throwable::Role::Status::TemporaryRedirect - 307 Temporary Redirect
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 DESCRIPTION
 

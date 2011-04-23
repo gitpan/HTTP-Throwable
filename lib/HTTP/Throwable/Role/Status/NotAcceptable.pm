@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::NotAcceptable::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::NotAcceptable::VERSION = '0.011';
+  $HTTP::Throwable::Role::Status::NotAcceptable::VERSION = '0.012';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::NotAcceptable - 406 Not Acceptable
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 DESCRIPTION
 

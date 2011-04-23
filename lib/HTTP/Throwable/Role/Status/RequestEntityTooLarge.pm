@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::RequestEntityTooLarge::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::RequestEntityTooLarge::VERSION = '0.011';
+  $HTTP::Throwable::Role::Status::RequestEntityTooLarge::VERSION = '0.012';
 }
 use Moose::Role;
 
@@ -39,7 +39,7 @@ HTTP::Throwable::Role::Status::RequestEntityTooLarge - 413 Request Entity Too La
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 DESCRIPTION
 

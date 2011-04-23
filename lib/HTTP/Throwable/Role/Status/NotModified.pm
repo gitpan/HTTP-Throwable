@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::NotModified::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::NotModified::VERSION = '0.011';
+  $HTTP::Throwable::Role::Status::NotModified::VERSION = '0.012';
 }
 use Moose::Role;
 
@@ -44,7 +44,7 @@ HTTP::Throwable::Role::Status::NotModified - 304 Not Modified
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 DESCRIPTION
 
@@ -60,21 +60,16 @@ The response MUST include the following header fields:
 
 =item Date, unless its omission is required by section 14.18.1
 
-=back
-
 If a clockless origin server obeys these rules, and proxies and
 clients add their own Date to any response received without one
 (as already specified by [RFC 2068], section 14.19), caches will
 operate correctly.
 
-=over 4
+=item ETag and/or Content-Location, if the header would have been sent in a 200 response to the same request
 
-=item ETag and/or Content-Location, if the header would have been
-      sent in a 200 response to the same request
+=item Expires, Cache-Control, and/or Vary, if the field-value might differ from that sent in any previous response for the same variant
 
-=item Expires, Cache-Control, and/or Vary, if the field-value might
-      differ from that sent in any previous response for the same
-      variant
+=back
 
 If the conditional GET used a strong cache validator, the response
 SHOULD NOT include other entity-headers. Otherwise (i.e., the conditional

@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Factory::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Factory::VERSION = '0.011';
+  $HTTP::Throwable::Factory::VERSION = '0.012';
 }
 use Moose;
 
@@ -98,7 +98,7 @@ HTTP::Throwable::Factory - a factory that throws HTTP::Throwables for you
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 OVERVIEW
 

@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::UnsupportedMediaType::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::UnsupportedMediaType::VERSION = '0.011';
+  $HTTP::Throwable::Role::Status::UnsupportedMediaType::VERSION = '0.012';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::UnsupportedMediaType - 415 Unsupported Media Type
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 DESCRIPTION
 

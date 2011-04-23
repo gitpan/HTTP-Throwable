@@ -19,8 +19,7 @@ my %WriteMakefileArgs = (
     'Test::Deep' => '0',
     'Test::Fatal' => '0.003',
     'Test::Moose' => '0',
-    'Test::More' => '0.88',
-    't::lib::Test::HT' => '0'
+    'Test::More' => '0.96'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -44,7 +43,7 @@ my %WriteMakefileArgs = (
     'Throwable' => '0.102080',
     'overload' => '0'
   },
-  'VERSION' => '0.011',
+  'VERSION' => '0.012',
   'test' => {
     'TESTS' => 't/*.t'
   }
