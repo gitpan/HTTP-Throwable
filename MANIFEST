@@ -53,4 +53,3 @@ t/400-all.t
 t/500-all.t
 t/lib/Test/HT.pm
 t/release-pod-syntax.t
-weaver.ini

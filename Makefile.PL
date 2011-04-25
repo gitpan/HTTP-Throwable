@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     'Moose' => '1.0',
     'Moose::Role' => '0',
     'Moose::Util::TypeConstraints' => '0',
-    'MooseX::Role::WithOverloading' => '0',
+    'MooseX::Role::WithOverloading' => '0.09',
     'MooseX::StrictConstructor' => '0.12',
     'Plack' => '0.9967',
     'Plack::Util' => '0',
@@ -43,7 +43,7 @@ my %WriteMakefileArgs = (
     'Throwable' => '0.102080',
     'overload' => '0'
   },
-  'VERSION' => '0.012',
+  'VERSION' => '0.013',
   'test' => {
     'TESTS' => 't/*.t'
   }

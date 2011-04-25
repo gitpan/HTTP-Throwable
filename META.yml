@@ -26,7 +26,7 @@ requires:
   Moose: 1.0
   Moose::Role: 0
   Moose::Util::TypeConstraints: 0
-  MooseX::Role::WithOverloading: 0
+  MooseX::Role::WithOverloading: 0.09
   MooseX::StrictConstructor: 0.12
   Plack: 0.9967
   Plack::Util: 0
@@ -37,7 +37,7 @@ requires:
   overload: 0
 resources:
   repository: git://github.com/rjbs/HTTP-Throwable.git
-version: 0.012
+version: 0.013
 x_Dist_Zilla:
   plugins:
     -
@@ -131,7 +131,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Repository
       name: '@RJBS/Repository'
-      version: 0.17
+      version: 0.18
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:

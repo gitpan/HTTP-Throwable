@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::BoringText::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::BoringText::VERSION = '0.012';
+  $HTTP::Throwable::Role::BoringText::VERSION = '0.013';
 }
 use Moose::Role;
 
@@ -22,7 +22,7 @@ HTTP::Throwable::Role::BoringText - provide the simplest text_body method possib
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 OVERVIEW
 

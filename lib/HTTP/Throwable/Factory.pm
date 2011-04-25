@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Factory::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Factory::VERSION = '0.012';
+  $HTTP::Throwable::Factory::VERSION = '0.013';
 }
 use Moose;
 
@@ -34,7 +34,6 @@ sub new_exception {
 sub core_roles {
     return qw(
         HTTP::Throwable
-        MooseX::StrictConstructor::Role::Object
     );
 }
 
@@ -83,6 +82,9 @@ sub class_for {
         cache        => 1,
     );
 
+    require MooseX::StrictConstructor;
+    MooseX::StrictConstructor->import({ into => $class->name });
+
     return $class->name;
 }
 
@@ -98,7 +100,7 @@ HTTP::Throwable::Factory - a factory that throws HTTP::Throwables for you
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 OVERVIEW
 

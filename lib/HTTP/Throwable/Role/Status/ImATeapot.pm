@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::ImATeapot::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::ImATeapot::VERSION = '0.012';
+  $HTTP::Throwable::Role::Status::ImATeapot::VERSION = '0.013';
 }
 use Moose::Role;
 
@@ -56,7 +56,7 @@ HTTP::Throwable::Role::Status::ImATeapot - 418 I'm a teapot
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 DESCRIPTION
 

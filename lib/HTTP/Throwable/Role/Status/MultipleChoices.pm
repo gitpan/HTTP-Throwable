@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::MultipleChoices::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::MultipleChoices::VERSION = '0.012';
+  $HTTP::Throwable::Role::Status::MultipleChoices::VERSION = '0.013';
 }
 use Moose::Role;
 
@@ -39,7 +39,7 @@ HTTP::Throwable::Role::Status::MultipleChoices - 300 Multiple Choices
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 DESCRIPTION
 

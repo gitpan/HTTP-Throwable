@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::SeeOther::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::SeeOther::VERSION = '0.012';
+  $HTTP::Throwable::Role::Status::SeeOther::VERSION = '0.013';
 }
 use Moose::Role;
 
@@ -28,7 +28,7 @@ HTTP::Throwable::Role::Status::SeeOther - 303 See Other
 
 =head1 VERSION
 
-version 0.012
+version 0.013
 
 =head1 DESCRIPTION
 
