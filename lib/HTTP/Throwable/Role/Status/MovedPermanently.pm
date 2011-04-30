@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::MovedPermanently::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::MovedPermanently::VERSION = '0.013';
+  $HTTP::Throwable::Role::Status::MovedPermanently::VERSION = '0.014';
 }
 use Moose::Role;
 
@@ -28,7 +28,7 @@ HTTP::Throwable::Role::Status::MovedPermanently - 301 Moved Permanently
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 DESCRIPTION
 

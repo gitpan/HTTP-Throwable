@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::HTTPVersionNotSupported::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::HTTPVersionNotSupported::VERSION = '0.013';
+  $HTTP::Throwable::Role::Status::HTTPVersionNotSupported::VERSION = '0.014';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::HTTPVersionNotSupported - 505 HTTP Version Not Su
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 DESCRIPTION
 

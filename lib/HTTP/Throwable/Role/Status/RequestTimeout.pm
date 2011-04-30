@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::RequestTimeout::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::RequestTimeout::VERSION = '0.013';
+  $HTTP::Throwable::Role::Status::RequestTimeout::VERSION = '0.014';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::RequestTimeout - 408 Request Timeout
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 DESCRIPTION
 
