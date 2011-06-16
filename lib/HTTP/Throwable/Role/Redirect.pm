@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Redirect::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Redirect::VERSION = '0.014';
+  $HTTP::Throwable::Role::Redirect::VERSION = '0.015';
 }
 use Moose::Role;
 
@@ -34,7 +34,7 @@ HTTP::Throwable::Role::Redirect - an exception that is a redirect
 
 =head1 VERSION
 
-version 0.014
+version 0.015
 
 =head1 OVERVIEW
 

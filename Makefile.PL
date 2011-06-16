@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
   'NAME' => 'HTTP::Throwable',
   'PREREQ_PM' => {
     'List::AllUtils' => '0',
-    'Moose' => '1.0',
+    'Moose' => '1.23',
     'Moose::Role' => '0',
     'Moose::Util::TypeConstraints' => '0',
     'MooseX::Role::WithOverloading' => '0.09',
@@ -43,7 +43,7 @@ my %WriteMakefileArgs = (
     'Throwable' => '0.102080',
     'overload' => '0'
   },
-  'VERSION' => '0.014',
+  'VERSION' => '0.015',
   'test' => {
     'TESTS' => 't/*.t'
   }

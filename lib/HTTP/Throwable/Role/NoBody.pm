@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::NoBody::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::NoBody::VERSION = '0.014';
+  $HTTP::Throwable::Role::NoBody::VERSION = '0.015';
 }
 use Moose::Role;
 
@@ -32,7 +32,7 @@ HTTP::Throwable::Role::NoBody - an exception with no body
 
 =head1 VERSION
 
-version 0.014
+version 0.015
 
 =head1 OVERVIEW
 

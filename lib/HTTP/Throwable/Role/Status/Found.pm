@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::Found::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::Found::VERSION = '0.014';
+  $HTTP::Throwable::Role::Status::Found::VERSION = '0.015';
 }
 use Moose::Role;
 
@@ -28,7 +28,7 @@ HTTP::Throwable::Role::Status::Found - 302 Found
 
 =head1 VERSION
 
-version 0.014
+version 0.015
 
 =head1 DESCRIPTION
 
