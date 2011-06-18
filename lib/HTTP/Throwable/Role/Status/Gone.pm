@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::Gone::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::Gone::VERSION = '0.015';
+  $HTTP::Throwable::Role::Status::Gone::VERSION = '0.016';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::Gone - 410 Gone
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

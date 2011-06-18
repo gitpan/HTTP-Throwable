@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Generic::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Generic::VERSION = '0.015';
+  $HTTP::Throwable::Role::Generic::VERSION = '0.016';
 }
 use Moose::Role;
 
@@ -29,7 +29,7 @@ HTTP::Throwable::Role::Generic - a generic built-by-hand exception
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

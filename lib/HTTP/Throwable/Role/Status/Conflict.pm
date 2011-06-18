@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::Conflict::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::Conflict::VERSION = '0.015';
+  $HTTP::Throwable::Role::Status::Conflict::VERSION = '0.016';
 }
 use Moose::Role;
 
@@ -27,7 +27,7 @@ HTTP::Throwable::Role::Status::Conflict - 409 Conflict
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

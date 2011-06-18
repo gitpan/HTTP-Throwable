@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::MethodNotAllowed::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.015';
+  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.016';
 }
 use Moose::Role;
 use Moose::Util::TypeConstraints;
@@ -56,7 +56,7 @@ HTTP::Throwable::Role::Status::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

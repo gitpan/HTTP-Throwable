@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.015';
+  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.016';
 }
 use Moose::Role;
 
@@ -47,7 +47,7 @@ HTTP::Throwable::Role::Status::ProxyAuthenticationRequired - 407 Proxy Authentic
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

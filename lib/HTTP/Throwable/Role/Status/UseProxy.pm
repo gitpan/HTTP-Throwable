@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::UseProxy::AUTHORITY = 'cpan:STEVAN';
 }
 BEGIN {
-  $HTTP::Throwable::Role::Status::UseProxy::VERSION = '0.015';
+  $HTTP::Throwable::Role::Status::UseProxy::VERSION = '0.016';
 }
 use Moose::Role;
 
@@ -28,7 +28,7 @@ HTTP::Throwable::Role::Status::UseProxy - 305 Use Proxy
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 DESCRIPTION
 

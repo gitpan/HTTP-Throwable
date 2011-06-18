@@ -43,7 +43,7 @@ my %WriteMakefileArgs = (
     'Throwable' => '0.102080',
     'overload' => '0'
   },
-  'VERSION' => '0.015',
+  'VERSION' => '0.016',
   'test' => {
     'TESTS' => 't/*.t'
   }
