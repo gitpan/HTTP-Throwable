@@ -9,46 +9,66 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libraries',
-  'AUTHOR' => 'Stevan Little <stevan.little@iinteractive.com>, Ricardo Signes <rjbs@cpan.org>',
-  'BUILD_REQUIRES' => {
-    'HTTP::Request::Common' => '0',
-    'Plack::Builder' => '0',
-    'Plack::Test' => '0',
-    'Scalar::Util' => '0',
-    'Test::Deep' => '0',
-    'Test::Fatal' => '0.003',
-    'Test::Moose' => '0',
-    'Test::More' => '0.96'
+  "ABSTRACT" => "a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libraries",
+  "AUTHOR" => "Stevan Little <stevan.little\@iinteractive.com>, Ricardo Signes <rjbs\@cpan.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "DISTNAME" => "HTTP-Throwable",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "HTTP::Throwable",
+  "PREREQ_PM" => {
+    "List::AllUtils" => 0,
+    "Module::Runtime" => 0,
+    "Moose" => "1.23",
+    "Moose::Role" => 0,
+    "Moose::Util::TypeConstraints" => 0,
+    "MooseX::Role::WithOverloading" => "0.09",
+    "MooseX::StrictConstructor" => "0.12",
+    "Plack" => "0.9967",
+    "Plack::Util" => 0,
+    "StackTrace::Auto" => 0,
+    "Sub::Exporter" => 0,
+    "Sub::Exporter::Util" => 0,
+    "Throwable" => "0.102080",
+    "overload" => 0
   },
-  'DISTNAME' => 'HTTP-Throwable',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'HTTP::Throwable',
-  'PREREQ_PM' => {
-    'List::AllUtils' => '0',
-    'Moose' => '1.23',
-    'Moose::Role' => '0',
-    'Moose::Util::TypeConstraints' => '0',
-    'MooseX::Role::WithOverloading' => '0.09',
-    'MooseX::StrictConstructor' => '0.12',
-    'Plack' => '0.9967',
-    'Plack::Util' => '0',
-    'StackTrace::Auto' => '0',
-    'Sub::Exporter' => '0',
-    'Sub::Exporter::Util' => '0',
-    'Throwable' => '0.102080',
-    'overload' => '0'
+  "TEST_REQUIRES" => {
+    "Capture::Tiny" => 0,
+    "HTTP::Request::Common" => 0,
+    "Plack::Builder" => 0,
+    "Plack::Test" => 0,
+    "Scalar::Util" => 0,
+    "Test::Deep" => 0,
+    "Test::Fatal" => "0.003",
+    "Test::Moose" => 0,
+    "Test::More" => "0.96",
+    "base" => 0,
+    "blib" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.016',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.017",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};

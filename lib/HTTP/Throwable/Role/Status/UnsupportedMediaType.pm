@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Status::UnsupportedMediaType;
 BEGIN {
   $HTTP::Throwable::Role::Status::UnsupportedMediaType::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Status::UnsupportedMediaType::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Status::UnsupportedMediaType::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -17,8 +17,6 @@ sub default_reason      { 'Unsupported Media Type' }
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -27,7 +25,7 @@ HTTP::Throwable::Role::Status::UnsupportedMediaType - 415 Unsupported Media Type
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -57,7 +55,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

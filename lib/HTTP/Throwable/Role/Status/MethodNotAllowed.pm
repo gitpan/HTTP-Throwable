@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Status::MethodNotAllowed;
 BEGIN {
   $HTTP::Throwable::Role::Status::MethodNotAllowed::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.017';
 }
 use Moose::Role;
 use Moose::Util::TypeConstraints;
@@ -46,8 +46,6 @@ around 'build_headers' => sub {
 
 no Moose::Role; no Moose::Util::TypeConstraints; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -56,7 +54,7 @@ HTTP::Throwable::Role::Status::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -98,7 +96,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

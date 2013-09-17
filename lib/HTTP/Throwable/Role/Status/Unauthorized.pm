@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Status::Unauthorized;
 BEGIN {
   $HTTP::Throwable::Role::Status::Unauthorized::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -37,8 +37,6 @@ around 'build_headers' => sub {
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -47,7 +45,7 @@ HTTP::Throwable::Role::Status::Unauthorized - 401 Unauthorized
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -97,7 +95,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

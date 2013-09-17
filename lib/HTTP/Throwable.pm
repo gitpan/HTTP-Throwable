@@ -2,8 +2,8 @@ package HTTP::Throwable;
 BEGIN {
   $HTTP::Throwable::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::VERSION = '0.016';
+{
+  $HTTP::Throwable::VERSION = '0.017';
 }
 use Moose::Role;
 use MooseX::StrictConstructor;
@@ -95,8 +95,6 @@ sub is_server_error {
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -105,7 +103,7 @@ HTTP::Throwable - a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libr
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 SYNOPSIS
 
@@ -392,7 +390,17 @@ L<HTTP::Throwable::Role::TextBody> and L<HTTP::Throwable::Role::NoBody>.
 
 =head1 SEE ALSO
 
+=over 4
+
+=item *
+
 L<http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>
+
+=item *
+
+L<Plack::Middleware::HTTPExceptions>
+
+=back
 
 =head1 AUTHORS
 
@@ -416,7 +424,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

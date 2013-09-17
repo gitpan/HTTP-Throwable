@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::TextBody;
 BEGIN {
   $HTTP::Throwable::Role::TextBody::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::TextBody::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::TextBody::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -25,8 +25,6 @@ requires 'text_body';
 no Moose::Role;
 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -35,7 +33,7 @@ HTTP::Throwable::Role::TextBody - an exception with a plaintext body
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 OVERVIEW
 
@@ -72,7 +70,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 # ABSTRACT: an exception with a plaintext body

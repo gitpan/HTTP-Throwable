@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Redirect;
 BEGIN {
   $HTTP::Throwable::Role::Redirect::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Redirect::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Redirect::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -24,8 +24,6 @@ around 'build_headers' => sub {
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -34,7 +32,7 @@ HTTP::Throwable::Role::Redirect - an exception that is a redirect
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 OVERVIEW
 
@@ -68,7 +66,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 # ABSTRACT: an exception that is a redirect

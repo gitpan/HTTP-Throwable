@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::BoringText;
 BEGIN {
   $HTTP::Throwable::Role::BoringText::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::BoringText::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::BoringText::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -11,8 +11,6 @@ sub text_body { $_[0]->status_line }
 
 no Moose::Role;
 1;
-
-
 
 =pod
 
@@ -22,7 +20,7 @@ HTTP::Throwable::Role::BoringText - provide the simplest text_body method possib
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 OVERVIEW
 
@@ -56,7 +54,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 # ABSTRACT: provide the simplest text_body method possible

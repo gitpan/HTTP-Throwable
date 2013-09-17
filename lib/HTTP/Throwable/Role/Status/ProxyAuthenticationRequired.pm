@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Status::ProxyAuthenticationRequired;
 BEGIN {
   $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -37,8 +37,6 @@ around 'build_headers' => sub {
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -47,7 +45,7 @@ HTTP::Throwable::Role::Status::ProxyAuthenticationRequired - 407 Proxy Authentic
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -92,7 +90,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

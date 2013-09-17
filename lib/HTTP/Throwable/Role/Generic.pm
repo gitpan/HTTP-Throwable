@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Generic;
 BEGIN {
   $HTTP::Throwable::Role::Generic::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Generic::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Generic::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -19,8 +19,6 @@ sub default_reason {
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -29,7 +27,7 @@ HTTP::Throwable::Role::Generic - a generic built-by-hand exception
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -58,7 +56,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

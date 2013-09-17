@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::NoBody;
 BEGIN {
   $HTTP::Throwable::Role::NoBody::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::NoBody::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::NoBody::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -22,8 +22,6 @@ sub as_string { $_[0]->status_line }
 no Moose::Role;
 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -32,7 +30,7 @@ HTTP::Throwable::Role::NoBody - an exception with no body
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 OVERVIEW
 
@@ -65,7 +63,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 # ABSTRACT: an exception with no body

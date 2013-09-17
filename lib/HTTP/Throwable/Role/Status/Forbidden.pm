@@ -2,8 +2,8 @@ package HTTP::Throwable::Role::Status::Forbidden;
 BEGIN {
   $HTTP::Throwable::Role::Status::Forbidden::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Role::Status::Forbidden::VERSION = '0.016';
+{
+  $HTTP::Throwable::Role::Status::Forbidden::VERSION = '0.017';
 }
 use Moose::Role;
 
@@ -17,8 +17,6 @@ sub default_reason      { 'Forbidden' }
 
 no Moose::Role; 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -27,7 +25,7 @@ HTTP::Throwable::Role::Status::Forbidden - 403 Forbidden
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 DESCRIPTION
 
@@ -61,7 +59,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 

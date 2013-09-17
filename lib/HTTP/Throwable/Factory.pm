@@ -2,8 +2,8 @@ package HTTP::Throwable::Factory;
 BEGIN {
   $HTTP::Throwable::Factory::AUTHORITY = 'cpan:STEVAN';
 }
-BEGIN {
-  $HTTP::Throwable::Factory::VERSION = '0.016';
+{
+  $HTTP::Throwable::Factory::VERSION = '0.017';
 }
 use Moose;
 
@@ -14,6 +14,7 @@ use Sub::Exporter -setup => {
     http_exception => Sub::Exporter::Util::curry_method('new_exception'),
   ],
 };
+use Module::Runtime;
 
 sub throw {
     my $factory = shift;
@@ -70,7 +71,7 @@ sub class_for {
         @roles = $self->roles_for_no_ident;
     }
 
-    Class::MOP::load_class($_) for @roles;
+    Module::Runtime::use_module($_) for @roles;
 
     my $class = Moose::Meta::Class->create_anon_class(
         superclasses => [ $self->base_class ],
@@ -90,8 +91,6 @@ sub class_for {
 
 1;
 
-
-
 =pod
 
 =head1 NAME
@@ -100,7 +99,7 @@ HTTP::Throwable::Factory - a factory that throws HTTP::Throwables for you
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 OVERVIEW
 
@@ -221,7 +220,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 
