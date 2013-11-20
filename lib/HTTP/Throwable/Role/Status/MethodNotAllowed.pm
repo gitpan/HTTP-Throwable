@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::MethodNotAllowed::AUTHORITY = 'cpan:STEVAN';
 }
 {
-  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.017';
+  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.018';
 }
 use Moose::Role;
 use Moose::Util::TypeConstraints;
@@ -15,11 +15,11 @@ with(
     'HTTP::Throwable::Role::BoringText',
 );
 
-enum 'HTTP::Throwable::Type::Method' => qw[
+enum 'HTTP::Throwable::Type::Method' => [ qw[
     OPTIONS GET HEAD
     POST PUT DELETE
     TRACE CONNECT
-];
+] ];
 
 # TODO: Consider adding a coersion to upper-case lower-cased strings and to
 # uniq the given input.  -- rjbs, 2011-02-21
@@ -54,7 +54,7 @@ HTTP::Throwable::Role::Status::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.017
+version 0.018
 
 =head1 DESCRIPTION
 

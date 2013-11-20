@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::AUTHORITY = 'cpan:STEVAN';
 }
 {
-  $HTTP::Throwable::VERSION = '0.017';
+  $HTTP::Throwable::VERSION = '0.018';
 }
 use Moose::Role;
 use MooseX::StrictConstructor;
@@ -103,7 +103,7 @@ HTTP::Throwable - a set of strongly-typed, PSGI-friendly HTTP 1.1 exception libr
 
 =head1 VERSION
 
-version 0.017
+version 0.018
 
 =head1 SYNOPSIS
 

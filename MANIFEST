@@ -45,7 +45,6 @@ lib/HTTP/Throwable/Role/Status/Unauthorized.pm
 lib/HTTP/Throwable/Role/Status/UnsupportedMediaType.pm
 lib/HTTP/Throwable/Role/Status/UseProxy.pm
 lib/HTTP/Throwable/Role/TextBody.pm
-t/00-compile.t
 t/000-load.t
 t/000-report-versions-tiny.t
 t/001-basic.t

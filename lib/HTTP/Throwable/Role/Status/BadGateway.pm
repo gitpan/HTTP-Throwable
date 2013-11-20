@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::BadGateway::AUTHORITY = 'cpan:STEVAN';
 }
 {
-  $HTTP::Throwable::Role::Status::BadGateway::VERSION = '0.017';
+  $HTTP::Throwable::Role::Status::BadGateway::VERSION = '0.018';
 }
 use Moose::Role;
 
@@ -25,7 +25,7 @@ HTTP::Throwable::Role::Status::BadGateway - 502 Bad Gateway
 
 =head1 VERSION
 
-version 0.017
+version 0.018
 
 =head1 DESCRIPTION
 

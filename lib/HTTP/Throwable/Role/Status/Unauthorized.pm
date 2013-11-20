@@ -3,7 +3,7 @@ BEGIN {
   $HTTP::Throwable::Role::Status::Unauthorized::AUTHORITY = 'cpan:STEVAN';
 }
 {
-  $HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.017';
+  $HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.018';
 }
 use Moose::Role;
 
@@ -45,7 +45,7 @@ HTTP::Throwable::Role::Status::Unauthorized - 401 Unauthorized
 
 =head1 VERSION
 
-version 0.017
+version 0.018
 
 =head1 DESCRIPTION
 

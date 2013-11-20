@@ -36,7 +36,6 @@ my %WriteMakefileArgs = (
     "overload" => 0
   },
   "TEST_REQUIRES" => {
-    "Capture::Tiny" => 0,
     "HTTP::Request::Common" => 0,
     "Plack::Builder" => 0,
     "Plack::Test" => 0,
@@ -46,41 +45,49 @@ my %WriteMakefileArgs = (
     "Test::Moose" => 0,
     "Test::More" => "0.96",
     "base" => 0,
-    "blib" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.017",
+  "VERSION" => "0.018",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
-  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
-  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
-  for my $mod ( keys %$tr ) {
-    if ( exists $br->{$mod} ) {
-      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
-    }
-    else {
-      $br->{$mod} = $tr->{$mod};
-    }
-  }
-}
+my %FallbackPrereqs = (
+  "HTTP::Request::Common" => 0,
+  "List::AllUtils" => 0,
+  "Module::Runtime" => 0,
+  "Moose" => "1.23",
+  "Moose::Role" => 0,
+  "Moose::Util::TypeConstraints" => 0,
+  "MooseX::Role::WithOverloading" => "0.09",
+  "MooseX::StrictConstructor" => "0.12",
+  "Plack" => "0.9967",
+  "Plack::Builder" => 0,
+  "Plack::Test" => 0,
+  "Plack::Util" => 0,
+  "Scalar::Util" => 0,
+  "StackTrace::Auto" => 0,
+  "Sub::Exporter" => 0,
+  "Sub::Exporter::Util" => 0,
+  "Test::Deep" => 0,
+  "Test::Fatal" => "0.003",
+  "Test::Moose" => 0,
+  "Test::More" => "0.96",
+  "Throwable" => "0.102080",
+  "base" => 0,
+  "overload" => 0,
+  "strict" => 0,
+  "warnings" => 0
+);
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
-  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM};
-  for my $mod ( keys %$br ) {
-    if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
-    }
-    else {
-      $pp->{$mod} = $br->{$mod};
-    }
-  }
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  delete $WriteMakefileArgs{TEST_REQUIRES};
+  delete $WriteMakefileArgs{BUILD_REQUIRES};
+  $WriteMakefileArgs{PREREQ_PM} = \%FallbackPrereqs;
 }
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
