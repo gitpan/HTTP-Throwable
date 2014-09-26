@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Redirect;
 BEGIN {
   $HTTP::Throwable::Role::Redirect::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Redirect::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Redirect::VERSION = '0.019';
 use Moose::Role;
 
 has 'location' => (
@@ -26,13 +24,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Redirect - an exception that is a redirect
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 OVERVIEW
 
@@ -70,3 +70,12 @@ the same terms as the Perl 5 programming language system itself.
 __END__
 # ABSTRACT: an exception that is a redirect
 
+#pod =head1 OVERVIEW
+#pod
+#pod This is an extremely simple method used by most of the 3xx series of
+#pod exceptions.  It adds a C<location> attribute that will be provided as the
+#pod Location header when the exception is converted to an HTTP message.
+#pod
+#pod Note that "MultipleChoices," the 300 status code is I<not> currently a
+#pod redirect, as its Location header is optional.  This may change in the future of
+#pod the semantics of this role are refined.

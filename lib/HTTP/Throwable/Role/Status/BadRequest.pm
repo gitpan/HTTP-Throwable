@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::BadRequest;
 BEGIN {
   $HTTP::Throwable::Role::Status::BadRequest::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::BadRequest::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::BadRequest::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -20,13 +18,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::BadRequest - 400 Bad Request
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -61,3 +61,8 @@ __END__
 
 # ABSTRACT: 400 Bad Request
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The request could not be understood by the server due to
+#pod malformed syntax. The client SHOULD NOT repeat the request
+#pod without modifications.

@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::NotImplemented;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotImplemented::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::NotImplemented::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::NotImplemented::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::NotImplemented - 501 Not Implemented
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -61,3 +61,11 @@ __END__
 
 # ABSTRACT: 501 Not Implemented
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server does not support the functionality required to
+#pod fulfill the request. This is the appropriate response when
+#pod the server does not recognize the request method and is
+#pod not capable of supporting it for any resource.
+#pod
+#pod

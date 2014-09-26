@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::PreconditionFailed;
 BEGIN {
   $HTTP::Throwable::Role::Status::PreconditionFailed::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::PreconditionFailed::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::PreconditionFailed::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::PreconditionFailed - 412 Precondition Failed
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -63,3 +63,12 @@ __END__
 
 # ABSTRACT: 412 Precondition Failed
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The precondition given in one or more of the request-header
+#pod fields evaluated to false when it was tested on the server.
+#pod This response code allows the client to place preconditions
+#pod on the current resource metainformation (header field data)
+#pod and thus prevent the requested method from being applied to
+#pod a resource other than the one intended.
+#pod

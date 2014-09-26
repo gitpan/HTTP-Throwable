@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable;
 BEGIN {
   $HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -31,13 +29,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::RequestedRangeNotSatisfiable - 416 Requested Range Not Satisfiable
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -81,3 +81,18 @@ __END__
 
 # ABSTRACT: 416 Requested Range Not Satisfiable
 
+#pod =head1 DESCRIPTION
+#pod
+#pod A server SHOULD return a response with this status code if a
+#pod request included a Range request-header field, and none of the
+#pod range-specifier values in this field overlap the current extent
+#pod of the selected resource, and the request did not include an
+#pod If-Range request-header field. (For byte-ranges, this means that
+#pod the first-byte-pos of all of the byte-range-spec values were greater
+#pod than the current length of the selected resource.)
+#pod
+#pod When this status code is returned for a byte-range request, the
+#pod response SHOULD include a Content-Range entity-header field specifying
+#pod the current length of the selected resource. This response MUST NOT
+#pod use the multipart/byteranges content-type.
+#pod

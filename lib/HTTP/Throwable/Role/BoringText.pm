@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::BoringText;
 BEGIN {
   $HTTP::Throwable::Role::BoringText::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::BoringText::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::BoringText::VERSION = '0.019';
 use Moose::Role;
 
 sub text_body { $_[0]->status_line }
@@ -14,13 +12,15 @@ no Moose::Role;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::BoringText - provide the simplest text_body method possible
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 OVERVIEW
 
@@ -58,3 +58,13 @@ the same terms as the Perl 5 programming language system itself.
 __END__
 # ABSTRACT: provide the simplest text_body method possible
 
+#pod =head1 OVERVIEW
+#pod
+#pod This role is as simple as can be.  It provides a single method, C<text_body>,
+#pod which returns the result of calling the C<status_line> method.
+#pod
+#pod This method exists so that exception classes can easily be compatible with the
+#pod L<HTTP::Throwable::Role::TextBody> role to provide a plain text body when
+#pod converted to an HTTP message.  Most of the core well-known exception types
+#pod consume this method.
+#pod

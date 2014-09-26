@@ -48,7 +48,7 @@ sub pmver {
     return sprintf('%-45s => %-10s%-15s%s', $module, $pmver, $wanted, "\n");
 }
 
-eval { $v .= pmver('ExtUtils::MakeMaker','6.30') };
+eval { $v .= pmver('ExtUtils::MakeMaker','any version') };
 eval { $v .= pmver('HTTP::Request::Common','any version') };
 eval { $v .= pmver('List::AllUtils','any version') };
 eval { $v .= pmver('Module::Runtime','any version') };

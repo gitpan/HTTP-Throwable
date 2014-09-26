@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::RequestTimeout;
 BEGIN {
   $HTTP::Throwable::Role::Status::RequestTimeout::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::RequestTimeout::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::RequestTimeout::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::RequestTimeout - 408 Request Timeout
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -61,3 +61,10 @@ __END__
 
 # ABSTRACT: 408 Request Timeout
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The client did not produce a request within the
+#pod time that the server was prepared to wait. The
+#pod client MAY repeat the request without modifications
+#pod at any later time.
+#pod

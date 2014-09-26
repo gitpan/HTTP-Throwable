@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::GatewayTimeout;
 BEGIN {
   $HTTP::Throwable::Role::Status::GatewayTimeout::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::GatewayTimeout::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::GatewayTimeout::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::GatewayTimeout - 504 Gateway Timeout
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -62,3 +62,11 @@ __END__
 
 # ABSTRACT: 504 Gateway Timeout
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server, while acting as a gateway or proxy, did not
+#pod receive a timely response from the upstream server specified
+#pod by the URI (e.g. HTTP, FTP, LDAP) or some other auxiliary
+#pod server (e.g. DNS) it needed to access in attempting to
+#pod complete the request.
+#pod

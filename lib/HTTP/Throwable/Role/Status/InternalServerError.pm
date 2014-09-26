@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::InternalServerError;
 BEGIN {
   $HTTP::Throwable::Role::Status::InternalServerError::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::InternalServerError::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::InternalServerError::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -31,13 +29,15 @@ no Moose; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::InternalServerError - 500 Internal Server Error
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -79,3 +79,14 @@ __END__
 
 # ABSTRACT: 500 Internal Server Error
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server encountered an unexpected condition which prevented it
+#pod from fulfilling the request.
+#pod
+#pod =attr show_stack_trace
+#pod
+#pod This is a boolean attribute which by default is true and indicates
+#pod to the C<text_body> method whether or not to show the stack trace
+#pod in the output.
+#pod

@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::BadGateway;
 BEGIN {
   $HTTP::Throwable::Role::Status::BadGateway::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::BadGateway::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::BadGateway::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::BadGateway - 502 Bad Gateway
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -60,3 +60,10 @@ __END__
 
 # ABSTRACT: 502 Bad Gateway
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server, while acting as a gateway or proxy, received
+#pod an invalid response from the upstream server it accessed
+#pod in attempting to fulfill the request.
+#pod
+#pod

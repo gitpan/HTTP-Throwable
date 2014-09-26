@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::MethodNotAllowed;
 BEGIN {
   $HTTP::Throwable::Role::Status::MethodNotAllowed::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::MethodNotAllowed::VERSION = '0.019';
 use Moose::Role;
 use Moose::Util::TypeConstraints;
 
@@ -48,13 +46,15 @@ no Moose::Role; no Moose::Util::TypeConstraints; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::MethodNotAllowed - 405 Method Not Allowed
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -101,3 +101,20 @@ __END__
 
 # ABSTRACT: 405 Method Not Allowed
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The method specified in the Request-Line is not allowed for the
+#pod resource identified by the Request-URI. The response MUST include
+#pod an Allow header containing a list of valid methods for the requested
+#pod resource.
+#pod
+#pod =attr allow
+#pod
+#pod This is an ArrayRef of HTTP methods, it is required and the HTTP
+#pod methods will be type checked to ensure validity and uniqueness.
+#pod
+#pod =head1 SEE ALSO
+#pod
+#pod HTTP Methods - L<http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html>
+#pod
+#pod

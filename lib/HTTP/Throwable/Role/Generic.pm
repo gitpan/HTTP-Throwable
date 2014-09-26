@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Generic;
 BEGIN {
   $HTTP::Throwable::Role::Generic::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Generic::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Generic::VERSION = '0.019';
 use Moose::Role;
 
 with 'HTTP::Throwable';
@@ -21,13 +19,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Generic - a generic built-by-hand exception
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -61,3 +61,8 @@ __END__
 
 # ABSTRACT: a generic built-by-hand exception
 
+#pod =head1 DESCRIPTION
+#pod
+#pod This role is used (for boring internals-related reasons) when you throw an
+#pod exception with no special roles mixed in.
+#pod

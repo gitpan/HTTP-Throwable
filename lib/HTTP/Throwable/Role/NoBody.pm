@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::NoBody;
 BEGIN {
   $HTTP::Throwable::Role::NoBody::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::NoBody::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::NoBody::VERSION = '0.019';
 use Moose::Role;
 
 sub body { return }
@@ -24,13 +22,15 @@ no Moose::Role;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::NoBody - an exception with no body
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 OVERVIEW
 
@@ -67,3 +67,11 @@ the same terms as the Perl 5 programming language system itself.
 __END__
 # ABSTRACT: an exception with no body
 
+#pod =head1 OVERVIEW
+#pod
+#pod This is a very simple role, implementing the required C<as_string>, C<body>,
+#pod and C<body_headers> for L<HTTP::Throwable>.
+#pod
+#pod When an HTTP::Throwable exception uses this role, its PSGI response will have
+#pod no entity body.  It will report a Content-Length of zero.  It will stringify to
+#pod its status line.

@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::Conflict;
 BEGIN {
   $HTTP::Throwable::Role::Status::Conflict::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::Conflict::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::Conflict::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::Conflict - 409 Conflict
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -75,3 +75,24 @@ __END__
 
 # ABSTRACT: 409 Conflict
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The request could not be completed due to a conflict with
+#pod the current state of the resource. This code is only allowed
+#pod in situations where it is expected that the user might be able
+#pod to resolve the conflict and resubmit the request. The response
+#pod body SHOULD include enough information for the user to recognize
+#pod the source of the conflict. Ideally, the response entity would
+#pod include enough information for the user or user agent to fix
+#pod the problem; however, that might not be possible and is not
+#pod required.
+#pod
+#pod Conflicts are most likely to occur in response to a PUT request.
+#pod For example, if versioning were being used and the entity being
+#pod PUT included changes to a resource which conflict with those
+#pod made by an earlier (third-party) request, the server might use
+#pod the 409 response to indicate that it can't complete the request.
+#pod In this case, the response entity would likely contain a list of
+#pod the differences between the two versions in a format defined by
+#pod the response Content-Type.
+#pod

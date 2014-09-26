@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::MovedPermanently;
 BEGIN {
   $HTTP::Throwable::Role::Status::MovedPermanently::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::MovedPermanently::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::MovedPermanently::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -20,13 +18,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::MovedPermanently - 301 Moved Permanently
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -69,3 +69,17 @@ __END__
 
 # ABSTRACT: 301 Moved Permanently
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The requested resource has been assigned a new permanent URI and
+#pod any future references to this resource SHOULD use one of the
+#pod returned URIs. Clients with link editing capabilities ought to
+#pod automatically re-link references to the Request-URI to one or more
+#pod of the new references returned by the server, where possible. This
+#pod response is cacheable unless indicated otherwise.
+#pod
+#pod The new permanent URI SHOULD be given by the Location field in the
+#pod response. Unless the request method was HEAD, the entity of the
+#pod response SHOULD contain a short hypertext note with a hyperlink to
+#pod the new URI(s).
+#pod

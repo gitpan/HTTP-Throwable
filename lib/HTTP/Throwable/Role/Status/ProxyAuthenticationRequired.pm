@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::ProxyAuthenticationRequired;
 BEGIN {
   $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::ProxyAuthenticationRequired::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -39,13 +37,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::ProxyAuthenticationRequired - 407 Proxy Authentication Required
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -95,3 +95,21 @@ __END__
 
 # ABSTRACT: 407 Proxy Authentication Required
 
+#pod =head1 DESCRIPTION
+#pod
+#pod This code is similar to 401 (Unauthorized), but indicates that the
+#pod client must first authenticate itself with the proxy. The proxy MUST
+#pod return a Proxy-Authenticate header field containing a challenge applicable
+#pod to the proxy for the requested resource. The client MAY repeat the request
+#pod with a suitable Proxy-Authorization header field.
+#pod
+#pod =attr proxy_authenticate
+#pod
+#pod This is a required string or array of strings that will be used to populate
+#pod the 'Proxy-Authenticate' header(s) when creating a PSGI response.
+#pod
+#pod =head1 SEE ALSO
+#pod
+#pod HTTP Authentication: Basic and Digest Access Authentication - L<http://www.apps.ietf.org/rfc/rfc2617.html>
+#pod
+#pod Proxy-Authenticate Header - L<http://www.apps.ietf.org/rfc/rfc2617.html#sec-3.6>

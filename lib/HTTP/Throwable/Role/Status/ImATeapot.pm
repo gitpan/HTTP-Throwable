@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::ImATeapot;
 BEGIN {
   $HTTP::Throwable::Role::Status::ImATeapot::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::ImATeapot::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::ImATeapot::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -48,13 +46,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::ImATeapot - 418 I'm a teapot
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -92,3 +92,12 @@ __END__
 
 # ABSTRACT: 418 I'm a teapot
 
+#pod =head1 DESCRIPTION
+#pod
+#pod This exception provides RFC2324 support, in accordance with section 2.3.3:
+#pod
+#pod    Any attempt to brew coffee with a teapot should result in the error code
+#pod    "418 I'm a teapot".  The resulting entity body MAY be short and stout.
+#pod
+#pod Boolean attributes C<short> and C<stout> are provided, and default to false.
+#pod

@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::Unauthorized;
 BEGIN {
   $HTTP::Throwable::Role::Status::Unauthorized::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::Unauthorized::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -39,13 +37,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::Unauthorized - 401 Unauthorized
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -100,3 +100,26 @@ __END__
 
 # ABSTRACT: 401 Unauthorized
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The request requires user authentication. The response MUST include a
+#pod WWW-Authenticate header field containing a challenge applicable to the
+#pod requested resource. The client MAY repeat the request with a suitable
+#pod Authorization header field. If the request already included Authorization
+#pod credentials, then the 401 response indicates that authorization has been
+#pod refused for those credentials. If the 401 response contains the same
+#pod challenge as the prior response, and the user agent has already attempted
+#pod authentication at least once, then the user SHOULD be presented the entity
+#pod that was given in the response, since that entity might include relevant
+#pod diagnostic information.
+#pod
+#pod =attr www_authenticate
+#pod
+#pod This is a required string or array of string that will be used to populate
+#pod the 'WWW-Authenticate' header(s) when creating a PSGI response.
+#pod
+#pod =head1 SEE ALSO
+#pod
+#pod HTTP Authentication: Basic and Digest Access Authentication - L<http://www.apps.ietf.org/rfc/rfc2617.html>
+#pod
+#pod WWW-Authenticate Header - L<http://www.apps.ietf.org/rfc/rfc2617.html#sec-3.2.1>

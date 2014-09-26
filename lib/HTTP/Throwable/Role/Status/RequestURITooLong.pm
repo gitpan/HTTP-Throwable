@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::RequestURITooLong;
 BEGIN {
   $HTTP::Throwable::Role::Status::RequestURITooLong::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::RequestURITooLong::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::RequestURITooLong::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::RequestURITooLong - 414 Request-URI Too Long
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -67,3 +67,16 @@ __END__
 
 # ABSTRACT: 414 Request-URI Too Long
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server is refusing to service the request because the
+#pod Request-URI is longer than the server is willing to interpret.
+#pod This rare condition is only likely to occur when a client has
+#pod improperly converted a POST request to a GET request with long
+#pod query information, when the client has descended into a URI
+#pod "black hole" of redirection (e.g., a redirected URI prefix that
+#pod points to a suffix of itself), or when the server is under attack
+#pod by a client attempting to exploit security holes present in some
+#pod servers using fixed-length buffers for reading or manipulating
+#pod the Request-URI.
+#pod

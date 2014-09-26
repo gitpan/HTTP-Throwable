@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::TextBody;
 BEGIN {
   $HTTP::Throwable::Role::TextBody::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::TextBody::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::TextBody::VERSION = '0.019';
 use Moose::Role;
 
 sub body { $_[0]->text_body }
@@ -27,13 +25,15 @@ no Moose::Role;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::TextBody - an exception with a plaintext body
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 OVERVIEW
 
@@ -74,3 +74,15 @@ the same terms as the Perl 5 programming language system itself.
 __END__
 # ABSTRACT: an exception with a plaintext body
 
+#pod =head1 OVERVIEW
+#pod
+#pod This is a very simple role, implementing the required C<as_string>, C<body>,
+#pod and C<body_headers> for L<HTTP::Throwable>.  In turn, it requires that a
+#pod C<text_body> method be provided.
+#pod
+#pod When an HTTP::Throwable exception uses this role, its PSGI response will have a
+#pod C<text/plain> content type and will send the result of calling its C<text_body>
+#pod method as the response body.  It will also stringify to the text body.
+#pod
+#pod The role L<HTTP::Throwable::Role::BoringText> can be useful to provide a
+#pod C<text_body> method that issues the C<status_line> as the body.

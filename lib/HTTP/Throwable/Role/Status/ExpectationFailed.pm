@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::ExpectationFailed;
 BEGIN {
   $HTTP::Throwable::Role::Status::ExpectationFailed::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::ExpectationFailed::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::ExpectationFailed::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::ExpectationFailed - 417 Expectation Failed
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -61,3 +61,10 @@ __END__
 
 # ABSTRACT: 417 Expectation Failed
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The expectation given in an Expect request-header field
+#pod could not be met by this server, or, if the server is a
+#pod proxy, the server has unambiguous evidence that the
+#pod request could not be met by the next-hop server.
+#pod

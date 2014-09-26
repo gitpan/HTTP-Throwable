@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::NotFound;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotFound::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::NotFound::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::NotFound::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::NotFound - 404 Not Found
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -65,3 +65,14 @@ __END__
 
 # ABSTRACT: 404 Not Found
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server has not found anything matching the Request-URI.
+#pod No indication is given of whether the condition is temporary
+#pod or permanent. The 410 (Gone) status code SHOULD be used if
+#pod the server knows, through some internally configurable mechanism,
+#pod that an old resource is permanently unavailable and has no
+#pod forwarding address. This status code is commonly used when
+#pod the server does not wish to reveal exactly why the request
+#pod has been refused, or when no other response is applicable.
+#pod

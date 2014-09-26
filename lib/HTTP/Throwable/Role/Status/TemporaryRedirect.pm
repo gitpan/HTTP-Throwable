@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::TemporaryRedirect;
 BEGIN {
   $HTTP::Throwable::Role::Status::TemporaryRedirect::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::TemporaryRedirect::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::TemporaryRedirect::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -20,13 +18,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::TemporaryRedirect - 307 Temporary Redirect
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -71,3 +71,19 @@ __END__
 
 # ABSTRACT: 307 Temporary Redirect
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The requested resource resides temporarily under a different URI.
+#pod Since the redirection MAY be altered on occasion, the client
+#pod SHOULD continue to use the Request-URI for future requests.
+#pod This response is only cacheable if indicated by a Cache-Control
+#pod or Expires header field.
+#pod
+#pod The temporary URI SHOULD be given by the Location field in the
+#pod response. Unless the request method was HEAD, the entity of the
+#pod response SHOULD contain a short hypertext note with a hyperlink
+#pod to the new URI(s), since many pre-HTTP/1.1 user agents do not
+#pod understand the 307 status. Therefore, the note SHOULD contain
+#pod the information necessary for a user to repeat the original
+#pod request on the new URI.
+#pod

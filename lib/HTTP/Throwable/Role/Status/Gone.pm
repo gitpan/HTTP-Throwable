@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::Gone;
 BEGIN {
   $HTTP::Throwable::Role::Status::Gone::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::Gone::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::Gone::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::Gone - 410 Gone
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -75,3 +75,24 @@ __END__
 
 # ABSTRACT: 410 Gone
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The requested resource is no longer available at the server and
+#pod no forwarding address is known. This condition is expected to
+#pod be considered permanent. Clients with link editing capabilities
+#pod SHOULD delete references to the Request-URI after user approval.
+#pod If the server does not know, or has no facility to determine,
+#pod whether or not the condition is permanent, the status code 404
+#pod (Not Found) SHOULD be used instead. This response is cacheable
+#pod unless indicated otherwise.
+#pod
+#pod The 410 response is primarily intended to assist the task of web
+#pod maintenance by notifying the recipient that the resource is
+#pod intentionally unavailable and that the server owners desire that
+#pod remote links to that resource be removed. Such an event is common
+#pod for limited-time, promotional services and for resources belonging
+#pod to individuals no longer working at the server's site. It is not
+#pod necessary to mark all permanently unavailable resources as "gone"
+#pod or to keep the mark for any length of time -- that is left to the
+#pod discretion of the server owner.
+#pod

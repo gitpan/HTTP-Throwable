@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::NotModified;
 BEGIN {
   $HTTP::Throwable::Role::Status::NotModified::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::NotModified::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::NotModified::VERSION = '0.019';
 use Moose::Role;
 
 use Plack::Util ();
@@ -36,13 +34,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::NotModified - 304 Not Modified
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -110,3 +110,42 @@ __END__
 
 # ABSTRACT: 304 Not Modified
 
+#pod =head1 DESCRIPTION
+#pod
+#pod If the client has performed a conditional GET request and access
+#pod is allowed, but the document has not been modified, the server
+#pod SHOULD respond with this status code. The 304 response MUST NOT
+#pod contain a message-body, and thus is always terminated by the
+#pod first empty line after the header fields.
+#pod
+#pod The response MUST include the following header fields:
+#pod
+#pod =begin :list
+#pod
+#pod = Date, unless its omission is required by section 14.18.1
+#pod
+#pod If a clockless origin server obeys these rules, and proxies and
+#pod clients add their own Date to any response received without one
+#pod (as already specified by [RFC 2068], section 14.19), caches will
+#pod operate correctly.
+#pod
+#pod = ETag and/or Content-Location, if the header would have been sent in a 200 response to the same request
+#pod
+#pod = Expires, Cache-Control, and/or Vary, if the field-value might differ from that sent in any previous response for the same variant
+#pod
+#pod =end :list
+#pod
+#pod If the conditional GET used a strong cache validator, the response
+#pod SHOULD NOT include other entity-headers. Otherwise (i.e., the conditional
+#pod GET used a weak validator), the response MUST NOT include other
+#pod entity-headers; this prevents inconsistencies between cached
+#pod entity-bodies and updated headers.
+#pod
+#pod If a 304 response indicates an entity not currently cached, then
+#pod the cache MUST disregard the response and repeat the request without
+#pod the conditional.
+#pod
+#pod If a cache uses a received 304 response to update a cache entry,
+#pod the cache MUST update the entry to reflect any new field values
+#pod given in the response.
+#pod

@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::SeeOther;
 BEGIN {
   $HTTP::Throwable::Role::Status::SeeOther::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::SeeOther::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::SeeOther::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -20,13 +18,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::SeeOther - 303 See Other
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -71,3 +71,18 @@ __END__
 
 # ABSTRACT: 303 See Other
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The response to the request can be found under a different URI
+#pod and SHOULD be retrieved using a GET method on that resource.
+#pod This method exists primarily to allow the output of a
+#pod POST-activated script to redirect the user agent to a selected
+#pod resource. The new URI is not a substitute reference for the
+#pod originally requested resource. The 303 response MUST NOT be
+#pod cached, but the response to the second (redirected) request
+#pod might be cacheable.
+#pod
+#pod The different URI SHOULD be given by the Location field in
+#pod the response. Unless the request method was HEAD, the entity
+#pod of the response SHOULD contain a short hypertext note with a
+#pod hyperlink to the new URI(s).

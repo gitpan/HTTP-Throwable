@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::Forbidden;
 BEGIN {
   $HTTP::Throwable::Role::Status::Forbidden::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::Forbidden::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::Forbidden::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -19,13 +17,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::Forbidden - 403 Forbidden
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -64,3 +64,14 @@ __END__
 
 # ABSTRACT: 403 Forbidden
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server understood the request, but is refusing to fulfill it.
+#pod Authorization will not help and the request SHOULD NOT be repeated.
+#pod If the request method was not HEAD and the server wishes to make
+#pod public why the request has not been fulfilled, it SHOULD describe
+#pod the reason for the refusal in the entity. If the server does not
+#pod wish to make this information available to the client, the status
+#pod code 404 (Not Found) can be used instead.
+#pod
+#pod

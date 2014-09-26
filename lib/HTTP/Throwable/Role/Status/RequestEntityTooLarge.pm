@@ -2,9 +2,7 @@ package HTTP::Throwable::Role::Status::RequestEntityTooLarge;
 BEGIN {
   $HTTP::Throwable::Role::Status::RequestEntityTooLarge::AUTHORITY = 'cpan:STEVAN';
 }
-{
-  $HTTP::Throwable::Role::Status::RequestEntityTooLarge::VERSION = '0.018';
-}
+$HTTP::Throwable::Role::Status::RequestEntityTooLarge::VERSION = '0.019';
 use Moose::Role;
 
 with(
@@ -31,13 +29,15 @@ no Moose::Role; 1;
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 HTTP::Throwable::Role::Status::RequestEntityTooLarge - 413 Request Entity Too Large
 
 =head1 VERSION
 
-version 0.018
+version 0.019
 
 =head1 DESCRIPTION
 
@@ -84,3 +84,18 @@ __END__
 
 # ABSTRACT: 413 Request Entity Too Large
 
+#pod =head1 DESCRIPTION
+#pod
+#pod The server is refusing to process a request because the request
+#pod entity is larger than the server is willing or able to process.
+#pod The server MAY close the connection to prevent the client from
+#pod continuing the request.
+#pod
+#pod If the condition is temporary, the server SHOULD include a
+#pod Retry-After header field to indicate that it is temporary and
+#pod after what time the client MAY try again.
+#pod
+#pod =attr retry_after
+#pod
+#pod This is an optional string to be used to add a Retry-After header
+#pod in the PSGI response.
